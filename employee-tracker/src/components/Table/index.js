@@ -9,7 +9,7 @@ export default class Table extends React.Component {
       this.getKeys = this.getKeys.bind(this);
     }
     
-
+   
     getKeys = () => {
       try {
         return Object.getOwnPropertyNames(this.props.emp_directory[0]);
@@ -29,17 +29,20 @@ export default class Table extends React.Component {
         return
       }
     }
-    
+    sortData = (data) => {
+      return data.sort((a,b) => (a.department>b.department) ?1 : -1)
+    }
     getRowsData = () => {
-      try{
-        let items = this.props.emp_directory;
-        let keys = this.getKeys();
-        return items.map((row, index)=>{
-          return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
-      })}
-      catch {
-        return
+           try{
+          let items = this.props.sorted ? this.sortData(this.props.emp_directory) : this.props.emp_directory;
+          let keys = this.getKeys();
+          return items.map((row, index)=>{
+            return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+        })}
+        catch {
+          return
       }
+      
     }
     
     render() {

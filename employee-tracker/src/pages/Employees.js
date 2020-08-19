@@ -1,14 +1,15 @@
 import React from "react";
 import Container from "../components/Container";
 import EmployeeList from "../directory";
-import Table from "../components/Table";
+import Form from "../components/Form";
+
 
 
 function Employees() {
   const directory = EmployeeList;
   return (
     <Container>
-      <Table emp_directory = {directory}></Table>
+        <Form emp_directory = {directory}></Form>
     </Container>
   );
 }
