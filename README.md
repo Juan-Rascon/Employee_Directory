@@ -22,8 +22,6 @@ You can access the delployed version of this application via the URL: [https://r
 
     								MIT License
 
-    		Unit 13 Express-Handlebars: Eat-Da-Burger!   Copyright (C) 2020 Jeffrey Quittman
-
     		Permission is hereby granted, free of charge, to any person obtaining a copy
     		of this software and associated documentation files (the "Software"), to deal
     		in the Software without restriction, including without limitation the rights
